@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Main</title>
+  <link rel="stylesheet" href="{{ static_url("styles.css") }}">
+</head>
+
+<body>
+  <h1>admin page</h1>
+  <table>
+    {% for w in words %}
+    <tr>
+      <td>{{ w[0] }}</td>
+      <td>{{ w[1] }}</td>
+    </tr>
+    {% end %}
+  </table>
+</body>
+</html>
+
+

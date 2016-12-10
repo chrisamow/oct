@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Main</title>
+  <link rel="stylesheet" href="{{ static_url("styles.css") }}">
+</head>
+
+<body>
+<form action="/" method="post" id="main_form">
+    <fieldset>
+        <label for="weblink">url: </label>
+        <input class="text-input" id="weblink" name="weblink" type="text" value="">
+    </fieldset>
+
+    <fieldset>
+        <span class="errormessage"></span>
+    </fieldset>
+
+    <div id="form_btn">
+        <input id="wordcloud-btn" class="btn btn-blue" type="submit" value="wordcloud" tabindex="3" style="float: right;">
+    </div>
+</form>
+</body>
+</html>
+
+

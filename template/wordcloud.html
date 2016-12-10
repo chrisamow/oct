@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Wordcloud</title>
+  <link rel="stylesheet" href="{{ static_url("styles.css") }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<script src={{ static_url("wordcloud2.js") }}></script>
+  <b>{{weblink}}</b>
+  <div>
+    <canvas id="cloudcanvas" width=1000 height=800 style='width:1000px;height:800px'></canvas>
+  </div>
+  <script>
+  wordlist = {% raw wordcount %}
+  canvas = document.getElementById('cloudcanvas');
+  var options =
+  {
+    list: wordlist,
+    gridSize: 18,
+    weightFactor: 3,
+    fontFamily: 'Finger Paint, cursive, sans-serif',
+    color: 'random-dark',
+    hover: window.drawBox,
+    rotateRatio: 0.5,
+    drawOutOfBound: false,
+    click: function(item) {
+      alert(item[0] + ': ' + item[1]);
+    },
+    backgroundColor: '#fff'
+  }
+  WordCloud(canvas, options );
+  </script>
+
+</body>
+</html>
+

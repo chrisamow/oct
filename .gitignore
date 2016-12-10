@@ -1,0 +1,11 @@
+main.db
+*.pyc
+*.swp
+
+npm-debug.log
+node_modules/*
+venv/*
+build/*
+
+static/build.js
+static/build.js.map

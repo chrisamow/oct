@@ -1,0 +1,7 @@
+tornado
+pytest
+lxml
+MySQLdb
+Crypto
+werkzeug
+
